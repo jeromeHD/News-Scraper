@@ -30,10 +30,8 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/News-Scraper";
 
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
-});
+// mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Routes
 
