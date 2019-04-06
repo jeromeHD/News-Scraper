@@ -141,7 +141,7 @@ $(document).ready(function() {
       displayArticles();
 
       $("#scrapeModalLabel").text("You successfully scraped new articles");
-      $("#scrapeModalBody").text("Woohoo!");
+      $("#scrapeModalBody").text("You have articles!");
 
       $("#scrapeModal").modal("show");
     });
