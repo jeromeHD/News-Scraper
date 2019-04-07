@@ -30,7 +30,7 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/News-Scraper";
 
 // Connect to the Mongo DB
-// mongoose.Promise = Promise;
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // Routes
@@ -43,7 +43,7 @@ app.get("/saved", function(req, res) {
   res.sendFile(path.join(__dirname, "public/savedArticles.html"));
 });
 
-// A GET route for scraping the echojs website
+// A GET route for scraping the website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   axios.get("https://www.nytimes.com/section/technology").then(function(response) {
@@ -78,8 +78,6 @@ app.get("/scrape", function(req, res) {
             // If an error occurred, send it to the client
             return res.json(err);
           });
-        // console.log(result)
-        // console.log("added " + incr + " new items")
       }
     });
 
