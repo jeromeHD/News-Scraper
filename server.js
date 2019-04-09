@@ -30,9 +30,9 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/News-Scraper";
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/News-Scraper", {
-  useNewUrlParser: true
-});
+// mongoose.connect("mongodb://localhost/News-Scraper", {
+//   useNewUrlParser: true
+// });
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
@@ -81,8 +81,8 @@ app.get("/scrape", function(req, res) {
             // If an error occurred, send it to the client
             return res.json(err);
           });
-        // console.log(result)
-        // console.log("added " + incr + " new items")
+        // console.log(result);
+        // console.log("added " + incr + " new items");
       }
     });
 

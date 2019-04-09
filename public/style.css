@@ -1,5 +1,5 @@
 body {
-  /* background: url("../images/wallpaper.jpg"); */
+  background-color: black;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ textarea {
 
 h1,
 h2 {
-  color: lightblue;
+  color: cornflowerblue;
   text-align: center;
 }
 
@@ -62,4 +62,7 @@ h2 {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 20px;
+}
+.a {
+  color: black;
 }
